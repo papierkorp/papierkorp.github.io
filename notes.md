@@ -136,7 +136,15 @@ gem update jekyll
 
 # Publish in Git
 
+https://docs.github.com/de/pages/quickstart
 https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll
+
+Bei [github](https://github.com/) ein neues Repository mit dem Repository-Name: papierkorp.github.io hinzufügen.
+Anschließend im Repo in `Settings - Pages - Source - Deploy from a branch` und `Settings - Pages - Source - Branch - main`
+
+Seite ist jetzt erreichbar unter: https://papierkorp.github.io
+
+Custom Domain auch in github im Repo unter `Settings - Pages - Custom Domain` eintragen und im DSN den CNAME auf `papierkorp.github.io` verlinken.
 
 # Eigenes Theme erstellen
 
