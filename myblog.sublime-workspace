@@ -1,0 +1,901 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"teil",
+				"teilnehmerliste_id"
+			],
+			[
+				"spieln",
+				"spielname"
+			],
+			[
+				"get_spi",
+				"get_spielid"
+			],
+			[
+				"teiln",
+				"teilnehmer"
+			],
+			[
+				"spi",
+				"spielliste_to_add"
+			],
+			[
+				"spiel",
+				"spielliste"
+			],
+			[
+				"punk",
+				"punkteliste"
+			],
+			[
+				"ergebni",
+				"ergebnistyp"
+			],
+			[
+				"anzahl_",
+				"anzahl_rounds"
+			],
+			[
+				"exe",
+				"executeScript"
+			],
+			[
+				"pu",
+				"punkteliste"
+			],
+			[
+				"anz",
+				"anzahl_runden"
+			],
+			[
+				"anzahl",
+				"anzahl_runden"
+			],
+			[
+				"er",
+				"ergebnislist"
+			],
+			[
+				"anza",
+				"anzahl_form"
+			],
+			[
+				"punkte",
+				"punkteliste_bearbeitet"
+			],
+			[
+				"erge",
+				"ergebnistyp"
+			],
+			[
+				"teilneh",
+				"teilnehmerarray"
+			],
+			[
+				"tieln",
+				"teilnehmerarray"
+			],
+			[
+				"tur",
+				"turniername"
+			],
+			[
+				"grupp",
+				"gruppenerstellung"
+			],
+			[
+				"gruppen",
+				"gruppenerstellung"
+			],
+			[
+				"conte",
+				"fit-content"
+			],
+			[
+				"inpu",
+				"input_edit"
+			],
+			[
+				"form",
+				"form_erg"
+			],
+			[
+				"fo",
+				"form_erg"
+			],
+			[
+				"erb",
+				"ErgebnisAddRundeForm"
+			],
+			[
+				"Er",
+				"ErgebnisDeleteRundeForm"
+			],
+			[
+				"punkteli",
+				"punkteliste_pro_spiel"
+			],
+			[
+				"spiellist",
+				"spielliste_pro_turnier"
+			],
+			[
+				"exec",
+				"execute_select_query"
+			],
+			[
+				"get_all",
+				"get_all_teilnehmer"
+			],
+			[
+				"creat",
+				"create_tables"
+			],
+			[
+				"crea",
+				"create_jinja_environment"
+			],
+			[
+				"bord",
+				"border-box"
+			],
+			[
+				"box-",
+				"border-box"
+			],
+			[
+				"tei",
+				"TeilnehmerDeleteForm"
+			],
+			[
+				"star",
+				"startThisShit"
+			],
+			[
+				"bef",
+				"beforebegin"
+			],
+			[
+				"ins",
+				"insertAdjacentHTML"
+			],
+			[
+				"fla",
+				"flask_babel"
+			],
+			[
+				"flas",
+				"flask_babel"
+			],
+			[
+				"Valid",
+				"ValidationError"
+			],
+			[
+				"rem",
+				"remember_me"
+			],
+			[
+				"press",
+				"pressExtrarunde\tabc"
+			],
+			[
+				"pres",
+				"pressKettenkarussell\tabc"
+			],
+			[
+				"Inner",
+				"InnerInterface\t(InnerInterface.java)"
+			],
+			[
+				"new",
+				"newinterface\t(newinterface.java)"
+			],
+			[
+				"hea",
+				"header\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "notes.md",
+			"settings":
+			{
+				"buffer_size": 4630,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					51,
+					1,
+					"insert",
+					{
+						"characters": "\nbundle"
+					},
+					"BwAAAKsJAAAAAAAArAkAAAAAAAAAAAAArAkAAAAAAACtCQAAAAAAAAAAAACtCQAAAAAAAK4JAAAAAAAAAAAAAK4JAAAAAAAArwkAAAAAAAAAAAAArwkAAAAAAACwCQAAAAAAAAAAAACwCQAAAAAAALEJAAAAAAAAAAAAALEJAAAAAAAAsgkAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqwkAAAAAAACrCQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					52,
+					1,
+					"insert",
+					{
+						"characters": " install"
+					},
+					"CAAAALIJAAAAAAAAswkAAAAAAAAAAAAAswkAAAAAAAC0CQAAAAAAAAAAAAC0CQAAAAAAALUJAAAAAAAAAAAAALUJAAAAAAAAtgkAAAAAAAAAAAAAtgkAAAAAAAC3CQAAAAAAAAAAAAC3CQAAAAAAALgJAAAAAAAAAAAAALgJAAAAAAAAuQkAAAAAAAAAAAAAuQkAAAAAAAC6CQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAsgkAAAAAAACyCQAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"termin",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"json",
+				"Pretty JSON: Format JSON"
+			],
+			[
+				"terminus",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"tasks",
+				"Tasks: New document"
+			],
+			[
+				"task",
+				"Tasks: New"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"temrinus tab",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"distraction",
+				"View: Toggle Distraction Free"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"python",
+				"Build With: Python3"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/develop/myblog"
+	],
+	"file_history":
+	[
+		"/C/develop/myblog/myblog.sublime-project",
+		"/C/develop/lan/app/templates/game_all.html",
+		"/C/develop/lan/hilfsdateien/todo.md",
+		"/C/develop/lan/app/templates/index.html",
+		"/C/develop/lan/app/templates/base.html",
+		"/C/develop/lan/app/db/testdata.sql",
+		"/C/develop/lan/app/db/tables.sql",
+		"/C/develop/lan/app/templates/turnier_neu.html",
+		"/C/develop/lan/app/templates/tournament.html",
+		"/C/develop/lan/app/db/testdata_tournament.sql",
+		"/C/develop/stable-diffusion/webui.sh",
+		"/C/Users/Markus/Downloads/768-v-ema.yaml",
+		"/C/develop/lan/app/templates/turnier.html",
+		"/C/Users/Markus/Downloads/bludit/bludit-3-13-1/bludit/index.php",
+		"/C/develop/lan/app/static/forms.css",
+		"/C/develop/lan/app/templates/ergebnis.html",
+		"/C/develop/lan/app/logik/ergebnisberechnung.py",
+		"/C/develop/lan/hilfsdateien/punkteliste_format.txt",
+		"/C/develop/lan/Readme.md",
+		"/C/develop/lan/.gitignore",
+		"/C/develop/lan/hilfsdateien/requirements.txt",
+		"/C/develop/lan/requirements.txt",
+		"/C/develop/lan/lanparty.db.old",
+		"/C/develop/lan/app/static/tables.css",
+		"/C/develop/lan/app/templates/spiele.html",
+		"/C/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/User/.git/MERGE_MSG",
+		"/C/Users/Markus/Downloads/hiitworkouts.md",
+		"/C/develop/test/app/routes.py",
+		"/C/develop/test/app/forms.py",
+		"/C/develop/lan/app/templates/spiel.html",
+		"/M/Games/SteamLibrary/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/own_crosshair.cfg",
+		"/C/develop/lan/__pycache__/config.cpython-310.pyc",
+		"/C/Users/Markus/Downloads/lebenslauf_markus (1).docx",
+		"/C/dev/lan/app/templates/result.html",
+		"/C/dev/lan/app/templates/turnier.html",
+		"/C/dev/lan/.flaskenv",
+		"/C/dev/lan/app/templates/turniere.html",
+		"/C/dev/lan/hilfsdateien/db_testdaten.md",
+		"/C/dev/lan/app/logik/ergebnisberechnung.py",
+		"/C/dev/lan/app/static/forms.css",
+		"/C/dev/lan/hilfsdateien/dbschema.md",
+		"/C/dev/lan/Readme.md",
+		"/C/dev/lan/app/templates/turnier_neu.html",
+		"/C/dev/lan/app/templates/profil.html",
+		"/C/dev/lan/todo.md",
+		"/C/dev/lan/Jinja.sublime-settings",
+		"/C/dev/lan/app/db_testdaten.txt",
+		"/C/dev/lan/app/db.py",
+		"/C/dev/lan/app/gruppenerstellung.py",
+		"/C/dev/lan/app/ergebnisberechnung.py",
+		"/C/dev/lan/app/forms.py",
+		"/C/dev/lan/app/templates/index.html",
+		"/C/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/PlainTasks/PlainTasks (Windows).sublime-settings",
+		"/C/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/PlainTasks/messages/Tutorial.todo",
+		"/C/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/PlainTasks/messages/install.txt",
+		"/C/dev/lan/lan.sublime-workspace",
+		"/C/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/User/Context.sublime-menu",
+		"/C/dev/lan/lan.sublime-project",
+		"/C/dev/lan/app/templates/x.html",
+		"/C/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/User/Jinja.sublime-settings",
+		"/C/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.user-ca-bundle",
+		"/C/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/User/YAML.sublime-settings",
+		"/C/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/User/HTML (Rails).sublime-settings",
+		"/C/Users/Markus/AppData/Local/Temp/Rar$DIa2660.21083/Java.sublime-build",
+		"/C/Users/Markus/AppData/Roaming/Sublime Text 3/Packages/User/Java.sublime-build",
+		"/C/Users/Markus/AppData/Local/Temp/Rar$DRa2660.14996/User/Default (Windows).sublime-keymap",
+		"/C/dev/javascript/cheatsheet.html",
+		"/C/dev/lan/app/templates/base.html",
+		"/C/dev/lan/app/templates/teilnehmer.html",
+		"/C/dev/flasktutorial/microblog/app/__init__.py",
+		"/C/dev/flasktutorial/microblog/app/routes.py",
+		"/C/dev/flasktutorial/microblog/app/search.py",
+		"/C/dev/flasktutorial/microblog/app/cli.py",
+		"/C/dev/flasktutorial/microblog/microblog.py",
+		"/C/dev/lan/app/templates/turniere_neu.html",
+		"/C/dev/lan/app/templates/spiel_neu.html",
+		"/C/dev/lan/app/templates/teilnehmer_neu.html",
+		"/C/dev/lan/app/templates/spiel.html",
+		"/C/dev/lan/lanparty.db",
+		"/C/dev/lan/app/static/index.css",
+		"/C/dev/lan/app/routes.py",
+		"/C/dev/lan/app/templates/spiele.html",
+		"/C/dev/lan/app/static/tables.css",
+		"/C/dev/lan/app/templates/spiele_neu.html",
+		"/C/dev/lan/app/static/navi.css",
+		"/C/dev/lan/app/__init__.py",
+		"/C/dev/lan/app/templates/teilnehmer_all.html",
+		"/C/dev/flasktutorial/microblog/app/templates/css/tables.css",
+		"/C/dev/lan/app/templates/css/navi.css",
+		"/C/dev/flasktutorial/microblog/app/templates/css/style.css",
+		"/C/dev/flasktutorial/microblog/app/templates/style.css",
+		"/C/Program Files/Git/etc/profile.d/aliases.sh",
+		"/C/dev/flasktutorial/microblog/app/templates/index.html",
+		"/C/dev/lan/app/lanparty.db",
+		"/C/Users/Markus/Downloads/dump.sqlite.sql",
+		"/C/dev/lan/lan.py",
+		"/C/dev/lan/config.py",
+		"/C/dev/lan/xxx.html",
+		"/C/dev/lan/tabletest.html",
+		"/C/dev/lan/navbartemplate.html",
+		"/C/dev/flasktutorial/microblog/app/templates/base.html",
+		"/C/dev/javascript/hiit.html",
+		"/C/Users/Markus/Desktop/1.txt",
+		"/C/dev/javascript/.git/MERGE_MSG",
+		"/C/dev/javascript/test.html",
+		"/C/dev/javascript/javascript_test.html",
+		"//",
+		"/C/dev/python_cheatsheet.py",
+		"/C/dev/flasktutorial/microblog/app/forms.py",
+		"/C/dev/flasktutorial/microblog/app/templates/_post.html",
+		"/C/dev/flasktutorial/microblog/config.py",
+		"/C/dev/flasktutorial/microblog/.flaskenv",
+		"/C/dev/flasktutorial/microblog/app/errors/errors.py",
+		"/C/dev/flasktutorial/microblog/app/models.py",
+		"/C/dev/flasktutorial/microblog/app/errors/__init__.py",
+		"/C/dev/flasktutorial/microblog/requirements.txt",
+		"/C/dev/flasktutorial/microblog/app/auth/__init__.py",
+		"/C/dev/flasktutorial/microblog/babel.cfg",
+		"/C/dev/flasktutorial/microblog/app/templates/edit_profile.html",
+		"/C/dev/flasktutorial/microblog/app/templates/user.html",
+		"/C/dev/flasktutorial/microblog/app/templates/login.html",
+		"/C/dev/flasktutorial/microblog/tests.py",
+		"/C/dev/flasktutorial/microblog/app/templates/errors/404.html",
+		"/C/dev/flasktutorial/microblog/app/errors.py",
+		"/C/dev/flasktutorial/microblog/app/templates/register.html",
+		"/C/dev/flasktutorial/microblog/app/translations/de/LC_MESSAGES/messages.po"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 122.0,
+		"where_history":
+		[
+			"C:\\develop\\lan",
+			"C:\\dev\\lan",
+			"C:\\dev",
+			"<open folders>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"create_tables",
+			"center_deleteRounds",
+			"index",
+			"tartseite",
+			"db",
+			"sb",
+			".html",
+			"ergebnis.html",
+			"spiele.html",
+			"spiel_neu.h",
+			"spiel.html",
+			"turniere.html",
+			"turnier_neu",
+			"strftime",
+			"json",
+			"url_for",
+			"turniername",
+			"get_teilnehmername_pro_turnier",
+			"get_teilnehmer_pro_turnier",
+			"get_turniername",
+			"add_game",
+			"get_spiel",
+			"form =",
+			"form=",
+			"punkteliste",
+			"print",
+			"ergebnistyp",
+			"form.ergebnistyp.data",
+			"get_teilnehmerid",
+			"edit_ergebnis",
+			"print",
+			"5",
+			"ns.runde",
+			"get_punkte_pro_spiel_pro_turnier",
+			"create_tables",
+			"spieltyp",
+			"max",
+			"max(",
+			"max",
+			"Ergebnisberechnung",
+			"get_punkte_pro_spiel_pro_turnier",
+			"add_runde",
+			"center",
+			"width",
+			"ns.",
+			"anzahl_rounds",
+			"runden_pro_spiel",
+			"class=",
+			"right",
+			"left",
+			"center",
+			"width:",
+			"form_disa",
+			"execute",
+			"get_punkte_pro_spiel_pro_turnier",
+			"spielname",
+			"turnierid",
+			"anzahl_teil",
+			"nazahl_te",
+			"ns.r",
+			"]",
+			"\\]",
+			"ns.rund",
+			"form_index",
+			"from_index",
+			"rund",
+			"class",
+			"class=",
+			"</tr>",
+			"<td>",
+			"<th",
+			"<tr>",
+			"<table",
+			"<li>",
+			"choices",
+			"form_disabl",
+			"get_ergebnistyp",
+			"myForm_edit",
+			"myForm_add",
+			"ergebnis",
+			"ergebis",
+			"_",
+			"spielname",
+			"/template",
+			"turnier_neu.html",
+			"get_punkte_pro_spiel_pro_turnier",
+			"runden",
+			"anzahlrunden",
+			"form_erg",
+			"g.",
+			"g",
+			"print(",
+			"print",
+			"ergebnistyp:",
+			"print(",
+			"ergebnistyp",
+			"print(",
+			"form_add",
+			"3,\"platz\",);",
+			":77",
+			"ergebnistyp",
+			"input_edit",
+			"cursor",
+			"spieltyp",
+			"(turnierid=turnierid, spielid=spielid, teilnehmerid=teilnehmerid, runde=runde, ergebnis=ergebnis, ergebnistyp=ergebnistyp, spieltyp=spieltyp)",
+			"spieltyp",
+			"ergebnis",
+			"spieltyp",
+			"ergebnis",
+			"angelegt",
+			"delete_spiel",
+			"spiel",
+			"teilnehmer",
+			"todo",
+			"Ergebnisberechnung",
+			"add_teilnehmer",
+			"Gruppenerstellung",
+			"Ergebnisberechnung",
+			"ergebnis",
+			"td",
+			"th",
+			"tr",
+			"    ",
+			"print",
+			"get_teilnehmer_pro_turnier",
+			"table",
+			"tabell",
+			"add_turnier"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"indexfrom0",
+			"\\n\\t</tr>",
+			"\\n\\t\\t<td>",
+			"\\n\\t\\t<th",
+			"\\n\\t<th",
+			"\\n\\t<tr>",
+			"\\n<tr>",
+			"\\n<table",
+			"\\n<li>",
+			"ergebnislist",
+			" ",
+			"",
+			"TD",
+			"TH",
+			"TR",
+			"",
+			"zeit",
+			"kills",
+			"platz",
+			"Zeit",
+			"Kills",
+			"Punkte",
+			"Platz",
+			"ergebnis, ergebnistyp)",
+			"ergebnis)",
+			"td.",
+			"as td",
+			"turnierdetails",
+			"myTable",
+			"\\n====== ",
+			"\\n==== ",
+			"\\n===== ",
+			"\\n====== ",
+			"\\n==== ",
+			"Depth:2",
+			"~",
+			"/Restbilder/",
+			"/2007/"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "notes.md",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4630,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1477,
+								1482
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
+							],
+							"mde.match_heading_hashes": false,
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1170.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 48.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Terminus":
+	{
+		"height": 606.0
+	},
+	"output.Terminus Build Results":
+	{
+		"height": 421.0
+	},
+	"output.exec":
+	{
+		"height": 285.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "myblog.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Persona",
+				"Java\\Person.java"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\Markus\\Documents\\Studium\\Studium.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 246.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
