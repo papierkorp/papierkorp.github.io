@@ -204,10 +204,13 @@
 	"buffers":
 	[
 		{
+			"contents": "# Erste Schritte\n\n```bash\njekyll serv #startet den eingebauten Server\n```\n\n## Konfiguration\n\nfindet über `_config.yml` statt\n\nDefault Konfigurationen: https://jekyllrb.com/docs/configuration/default/\n\n## Post Default Layout\n\nhttp://jekyllrb.com/docs/configuration/front-matter-defaults/\n\n```bash\nvi _config.yml\n\tdefaults:\n\t  -\n\t    scope:\n\t      path: \"\" # ein leerer string an dieser Stelle bezieht alle Projektateien ein\n\t      type: \"posts\"\n\t    values:\n\t      layout: \"default\"\n```\n\n## Front Matter (Metadaten)\n\nWird im Post erstellt, und ganz oben mit 3x `-` eingeleitet und beendet.\nWird von Jekyll gelesen und verwendet.\n\nHier können auch eigene Variablen festgelegt und benannt werden.\n\nDiese Variablen können dann in Templates, Schleifen und IF-Abfragen verwendet werden.\n\nIn `_config` können unter `default: values:` default Werte festgelegt werden.\n\nBeispiel:\n\n```yaml\n---\nlayout: post\ntitle:  \"Welcome to Jekyll!\"\ndate:   2023-06-06 13:13:20 +0200\ncategories: jekyll update\n---\n```\n\n## Eigenes Layout erstellen\n\n```bash\nmkdir myblog/_layout\ncd _layout\nvi default.html page.html post.html\n\nmkdir myblog/_includes\ncd _includes\nvi header.html footer.html sidebar.html\n```\n\n**default.html**\n```html\n{% include header.html %}\n    {{ content }}\n{% include footer.html %}\n```\n\n### Liquid Templates\n\nhttps://shopify.github.io/liquid/basics/introduction/\n\n**Bauteile aufrufen**\n\n```html\n{% include footer.html %}\n```\n\n\n## Anderes Theme installieren\n\nhttps://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll\n\n\n\n\n```bash\nvi Gemfile #gem \"jekyll-theme-clean-blog\".\nbundle install\nvi _config.yml #theme: jekyll-theme-clean-blog\nbundle exec jekyll serve\n```\n\nhttps://jekyllthemes.io/theme/alembic\n\nhttps://jekyllthemes.io/theme/beautiful-jekyll\n\n## markdown\n\nals default markdown wird https://kramdown.gettalong.org/quickref.html verwendet.\n\n# Installation\n\nLaut Tutorial: https://jekyllrb.com/docs/step-by-step/01-setup/\n\n```bash\nsudo apt-get install ruby-full build-essential zlib1g-dev\n\n#Avoid installing RubyGems packages (called gems) as the root user. Instead, set up a gem installation directory for your user account. The following commands will add environment variables to your ~/.bashrc file to configure the gem installation path:\n\necho '# Install Ruby Gems to ~/gems' >> ~/.bashrc\necho 'export GEM_HOME=\"$HOME/gems\"' >> ~/.bashrc\necho 'export PATH=\"$HOME/gems/bin:$PATH\"' >> ~/.bashrc\nsource ~/.bashrc\n\ngem install jekyll bundler\n```\n\n**Neues Projekt**\n\n```bash\n#1 Möglichkeit\njekyll new myblog\ncd myblog\nbundle install\nbundle exec jekyll serve\n\n#2. Möglichkeit\nvi Gemfile #gem \"jekyll\"\nbundle init\n```\n\n\n**Upgrade**\n\n```bash\njekyll -v\ngem update jekyll\n```\n\n\n# Publish in Git\n\nhttps://docs.github.com/de/pages/quickstart\nhttps://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll\n\nBei [github](https://github.com/) ein neues Repository mit dem Repository-Name: papierkorp.github.io hinzufügen.\nAnschließend im Repo in `Settings - Pages - Source - Deploy from a branch` und `Settings - Pages - Source - Branch - main`\n\nSeite ist jetzt erreichbar unter: https://papierkorp.github.io\n\nCustom Domain auch in github im Repo unter `Settings - Pages - Custom Domain` eintragen und im DSN den CNAME auf `papierkorp.github.io` verlinken.\n\n# Eigenes Theme erstellen\n\n- https://medium.com/@jameshamann/creating-your-own-jekyll-theme-gem-1f8180a0e4b8\n- https://jekyllrb.com/docs/themes/\n- https://www.siteleaf.com/blog/making-your-first-jekyll-theme-part-1/\n- https://dev.to/supunkavinda/i-created-a-jekyll-theme-in-375-minutes-eoj\n- https://idratherbewriting.com/documentation-theme-jekyll/\n\nAlle templates und Layouts werden in einem Ruby gem gespeichert.\n\n```bash\n\n```\n\n**Publish + Testing**\n\nBei [Ruby Gems](https://rubygems.org/) regsitrieren um das Theme später hochzuladen.\n\n```bash\njekyll new-theme papierkorp-theme\ntree papierkorp-theme\n\t├── Gemfile \t\t\t\t\t#verweist auf .gemspec\n\t├── LICENSE.txt\t\t\t\t\t\n\t├── README.mkdir\t\t\t\t\n\t├── _data\t\t\t\t\t\t\n\t├── _includes\t\t\t\t\t#templates\n\t├── _layouts\t\t\t\t\t\n\t│   ├── default.html \t\t\t\n\t│   ├── page.html \t\t\t\t\n\t│   └── post.html \t\t\t\t\n\t├── _sass\t\t\t\t\t\t#css\n\t├── assets\t\t\t\t\t\t#static files (main styles.scss)\n\t└── papierkorp-theme.gemspec\t#all ruby gem Daten (Version, Name, Beschreibung...)\n\njekyll serve  #wird wie eine jekyll site behandelt und kann deshalb gestartet werden\ngem build YOURTHEME.gemspec #erstellt eine gem file im Ordner, dieses gem File (Pfad) bei meiner Jekyll Seite hinzufügen\n\n#Zum Finish die gemspec Datei mit Version und so füllen:\nvi papierkorp-theme.gemspec\n\ngem push YOURTHEME.gem\ngem yank YOURTHEME #theme wieder löschen fals Fehler passiert sind\n```",
 			"file": "notes.md",
+			"file_size": 4720,
+			"file_write_time": 133306302236629641,
 			"settings":
 			{
-				"buffer_size": 4630,
+				"buffer_size": 4680,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			},
@@ -221,7 +224,7 @@
 						"characters": "\nbundle"
 					},
 					"BwAAAKsJAAAAAAAArAkAAAAAAAAAAAAArAkAAAAAAACtCQAAAAAAAAAAAACtCQAAAAAAAK4JAAAAAAAAAAAAAK4JAAAAAAAArwkAAAAAAAAAAAAArwkAAAAAAACwCQAAAAAAAAAAAACwCQAAAAAAALEJAAAAAAAAAAAAALEJAAAAAAAAsgkAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAqwkAAAAAAACrCQAAAAAAAAAAAAAAAPC/"
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACrCQAAAAAAAKsJAAAAAAAAAAAAAAAA8L8"
 				],
 				[
 					52,
@@ -231,7 +234,35 @@
 						"characters": " install"
 					},
 					"CAAAALIJAAAAAAAAswkAAAAAAAAAAAAAswkAAAAAAAC0CQAAAAAAAAAAAAC0CQAAAAAAALUJAAAAAAAAAAAAALUJAAAAAAAAtgkAAAAAAAAAAAAAtgkAAAAAAAC3CQAAAAAAAAAAAAC3CQAAAAAAALgJAAAAAAAAAAAAALgJAAAAAAAAuQkAAAAAAAAAAAAAuQkAAAAAAAC6CQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAsgkAAAAAAACyCQAAAAAAAAAAAAAAAPC/"
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACyCQAAAAAAALIJAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					13,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"AgAAAO8FAAAAAAAA8AUAAAAAAAAAAAAA8AUAAAAAAADxBQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA7wUAAAAAAADvBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					16,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"AgAAAKgGAAAAAAAAqQYAAAAAAAAAAAAAqQYAAAAAAACqBgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqAYAAAAAAACoBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					17,
+					1,
+					"paste",
+					null,
+					"AQAAAKoGAAAAAAAA2AYAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqgYAAAAAAACqBgAAAAAAAAAAAAAAAPC/"
 				]
 			]
 		}
@@ -494,6 +525,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"clean",
 			"create_tables",
 			"center_deleteRounds",
 			"index",
@@ -620,8 +652,7 @@
 			"print",
 			"get_teilnehmer_pro_turnier",
 			"table",
-			"tabell",
-			"add_turnier"
+			"tabell"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -688,15 +719,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4630,
+						"buffer_size": 4680,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1477,
-								1482
+								1752,
+								1752
 							]
 						],
 						"settings":
@@ -720,31 +751,46 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
@@ -759,22 +805,7 @@
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content"
+								"bh_round_content"
 							],
 							"mde.match_heading_hashes": false,
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
@@ -782,7 +813,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1170.0,
+						"translation.y": 1330.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -892,7 +923,7 @@
 	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 246.0,
 	"status_bar_visible": true,
 	"template_settings":
