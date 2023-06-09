@@ -160,6 +160,14 @@ Alle templates und Layouts werden in einem Ruby gem gespeichert.
 
 ```
 
+**Inspiration**
+
+Navigation/Layout: https://beautifuljekyll.com/
+Archiv/Search/Cards/TOC: https://chirpy.cotes.page/archives/
+Categories/Navi: https://mmistakes.github.io/so-simple-theme/categories/
+Categories/TOC: https://jeffreytse.github.io/jekyll-theme-yat/categories.html
+Home/Cards/TOC/Category: https://unifreak.github.io/
+
 **Publish + Testing**
 
 Bei [Ruby Gems](https://rubygems.org/) regsitrieren um das Theme später hochzuladen.
