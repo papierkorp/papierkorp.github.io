@@ -2,7 +2,21 @@
 	"folders":
 	[
 		{
-			"path": "."
-		}
-	]
+			"path": ".",
+		},
+		{
+			"path": "C:\\develop\\papierkorp-theme"
+		},
+	],
+	"settings":
+	{
+		"project_syntaxes": [
+            {
+                "syntax": "Liquid/Syntaxes/HTML (Liquid)",
+                "rules": [
+                    {"file_path": ".*\\.html(\\.dist)?$"},
+                ]
+            }
+        ],
+	},
 }

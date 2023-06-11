@@ -147,31 +147,36 @@ Seite ist jetzt erreichbar unter: https://papierkorp.github.io
 
 Custom Domain auch in github im Repo unter `Settings - Pages - Custom Domain` eintragen und im DSN den CNAME auf `papierkorp.github.io` verlinken.
 
+
+
+
+
+
+
+
+
+
+
+
 # Eigenes Theme erstellen
 
-- https://medium.com/@jameshamann/creating-your-own-jekyll-theme-gem-1f8180a0e4b8
-- https://jekyllrb.com/docs/themes/
-- https://www.siteleaf.com/blog/making-your-first-jekyll-theme-part-1/
-- https://dev.to/supunkavinda/i-created-a-jekyll-theme-in-375-minutes-eoj
-- https://idratherbewriting.com/documentation-theme-jekyll/
+- Offizielle Doku: https://jekyllrb.com/docs/themes/
+- Gemfile erstellen: https://medium.com/@jameshamann/creating-your-own-jekyll-theme-gem-1f8180a0e4b8
+- Erste Schritte: https://www.siteleaf.com/blog/making-your-first-jekyll-theme-part-2/
 
-Alle templates und Layouts werden in einem Ruby gem gespeichert.
+Alle templates und Layouts werden in einem Ruby gem gespeichert. Das Ruby gem wird später durch den `build` command erstellt und ins Ruby Repo gepusht.
 
-```bash
+**Vorlage erstellen**
 
-```
+Hab mir [Lunacy](https://icons8.de/lunacy) installiert und erstmal durch folgende Inspirationen eine Design erstellt:
 
-**Inspiration**
+- Navigation/Layout: https://beautifuljekyll.com/
+- Archiv/Search/Cards/TOC: https://chirpy.cotes.page/archives/
+- Categories/Navi: https://mmistakes.github.io/so-simple-theme/categories/
+- Categories/TOC: https://jeffreytse.github.io/jekyll-theme-yat/categories.html
+- Home/Cards/TOC/Category: https://unifreak.github.io/
 
-Navigation/Layout: https://beautifuljekyll.com/
-Archiv/Search/Cards/TOC: https://chirpy.cotes.page/archives/
-Categories/Navi: https://mmistakes.github.io/so-simple-theme/categories/
-Categories/TOC: https://jeffreytse.github.io/jekyll-theme-yat/categories.html
-Home/Cards/TOC/Category: https://unifreak.github.io/
-
-**Publish + Testing**
-
-Bei [Ruby Gems](https://rubygems.org/) regsitrieren um das Theme später hochzuladen.
+**Layout erstellen**
 
 ```bash
 jekyll new-theme papierkorp-theme
@@ -181,20 +186,139 @@ tree papierkorp-theme
 	├── README.mkdir				
 	├── _data						
 	├── _includes					#templates
-	├── _layouts					
+	├── _layouts					#Default Styles erstellen
 	│   ├── default.html 			
 	│   ├── page.html 				
 	│   └── post.html 				
 	├── _sass						#css
 	├── assets						#static files (main styles.scss)
-	└── papierkorp-theme.gemspec	#all ruby gem Daten (Version, Name, Beschreibung...)
+	└── papierkorp-theme.gemspec	#alle ruby gem Daten (Version, Name, Beschreibung...)
 
-jekyll serve  #wird wie eine jekyll site behandelt und kann deshalb gestartet werden
-gem build YOURTHEME.gemspec #erstellt eine gem file im Ordner, dieses gem File (Pfad) bei meiner Jekyll Seite hinzufügen
+cd papierkorp-theme
+vi index.html
+bundle exec jekyll serve --watch #lokalen Server für das Theme starten
+```
 
-#Zum Finish die gemspec Datei mit Version und so füllen:
-vi papierkorp-theme.gemspec
+```bash
+mkdir _posts #Beispielposts erstellen
+vi ./_posts/2023-06-01-example-post.md
+vi vi ./_config.yml #Default config.yml mitgeben
+```
 
-gem push YOURTHEME.gem
-gem yank YOURTHEME #theme wieder löschen fals Fehler passiert sind
+[Jekyll Remote Theme](https://github.com/benbalter/jekyll-remote-theme) beachten: => Plugins müssen [Github Approved sein](https://learn.siteleaf.com/themes/jekyll-plugins/#github-pages-approved-plugins&gsc.tab=0)
+
+**Mit neuen Projekt testen**
+
+```bash
+gem build papierkorp-theme.gemspec #erstellt eine gem file im Ordner, dieses gem File (Pfad) bei meiner Jekyll Seite hinzufügen
+jekyll new testblog
+vi Gemfile
+	gem "papierkorp-theme" => :path => "C:\develop\papierkorp-theme-0.1.0.gem"
+bundle
+vi _config.yml
+	theme: papierkorp-theme
+bundle exec jekyll serve --watch
+```
+
+**Live gehen**
+
+Bei [Ruby Gems](https://rubygems.org/) registrieren um das Theme später hochzuladen.
+
+```bash
+#Erstellen
+vi ./screenshot.png #screenshot.png in root dir speichern
+vi papierkorp-theme.gemspec #Zum Finish die gemspec Datei mit Version, Author, Files befüllen
+gem build papierkorp-theme.gemspec
+gem push papierkorp-theme.gem
+gem yank papierkorp-theme #theme wieder löschen fals Fehler passiert sind
+```
+
+
+
+
+
+# SASS
+
+```
+#Syntax .sass
+nav
+	ul
+		margin: 0
+		padding: 0
+		list-style: none
+	li
+		display: inline-block
+	a
+		display: block
+		padding: 6px 12px
+		text-decoration: none
+
+#syntax .scss
+nav {
+	ul {
+		margin: 0
+		padding: 0
+		list-style: none
+	}
+
+	li {
+		display: inline-block
+	}
+
+	a {
+		display: block
+		padding: 6px 12px
+		text-decoration: none
+	}
+}
+
+#variables
+$red: hsl(0, 100%, 50%);
+
+.button.danger {
+	color: $red;
+	border: 1px solid $red;
+}
+
+#Nesting
+#&=refer to parent selector
+.btn {
+	&:focus {}
+	&:hover {}
+	&:active {}
+}
+
+#Funktionalität
+@mixin flex-column($color) {
+	display: flex;
+	flex-direction: column;
+	background-color: $color;
+}
+
+.card {
+	@include flex-column(black);
+}
+
+@mixin theme-colors($theme) {
+	@if $theme == 'light' {} @else {} 
+}
+
+$sizes: 40px, 50px, 80px;
+@each $size in $sizes {
+	.icon-#{$size} {
+		font-size: $size;
+	}
+}
+
+@function sum($numbers) {
+	$sum: 0;
+
+	@each $number in $numbers {
+		$sum: $sum + $number;
+	}
+
+	@return $sumn;
+}
+
+.card {background: lighten(green, 25%)}
 ```

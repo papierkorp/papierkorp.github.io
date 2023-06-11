@@ -204,65 +204,33 @@
 	"buffers":
 	[
 		{
-			"contents": "# Erste Schritte\n\n```bash\njekyll serv #startet den eingebauten Server\n```\n\n## Konfiguration\n\nfindet über `_config.yml` statt\n\nDefault Konfigurationen: https://jekyllrb.com/docs/configuration/default/\n\n## Post Default Layout\n\nhttp://jekyllrb.com/docs/configuration/front-matter-defaults/\n\n```bash\nvi _config.yml\n\tdefaults:\n\t  -\n\t    scope:\n\t      path: \"\" # ein leerer string an dieser Stelle bezieht alle Projektateien ein\n\t      type: \"posts\"\n\t    values:\n\t      layout: \"default\"\n```\n\n## Front Matter (Metadaten)\n\nWird im Post erstellt, und ganz oben mit 3x `-` eingeleitet und beendet.\nWird von Jekyll gelesen und verwendet.\n\nHier können auch eigene Variablen festgelegt und benannt werden.\n\nDiese Variablen können dann in Templates, Schleifen und IF-Abfragen verwendet werden.\n\nIn `_config` können unter `default: values:` default Werte festgelegt werden.\n\nBeispiel:\n\n```yaml\n---\nlayout: post\ntitle:  \"Welcome to Jekyll!\"\ndate:   2023-06-06 13:13:20 +0200\ncategories: jekyll update\n---\n```\n\n## Eigenes Layout erstellen\n\n```bash\nmkdir myblog/_layout\ncd _layout\nvi default.html page.html post.html\n\nmkdir myblog/_includes\ncd _includes\nvi header.html footer.html sidebar.html\n```\n\n**default.html**\n```html\n{% include header.html %}\n    {{ content }}\n{% include footer.html %}\n```\n\n### Liquid Templates\n\nhttps://shopify.github.io/liquid/basics/introduction/\n\n**Bauteile aufrufen**\n\n```html\n{% include footer.html %}\n```\n\n\n## Anderes Theme installieren\n\nhttps://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll\n\n\n\n\n```bash\nvi Gemfile #gem \"jekyll-theme-clean-blog\".\nbundle install\nvi _config.yml #theme: jekyll-theme-clean-blog\nbundle exec jekyll serve\n```\n\nhttps://jekyllthemes.io/theme/alembic\n\nhttps://jekyllthemes.io/theme/beautiful-jekyll\n\n## markdown\n\nals default markdown wird https://kramdown.gettalong.org/quickref.html verwendet.\n\n# Installation\n\nLaut Tutorial: https://jekyllrb.com/docs/step-by-step/01-setup/\n\n```bash\nsudo apt-get install ruby-full build-essential zlib1g-dev\n\n#Avoid installing RubyGems packages (called gems) as the root user. Instead, set up a gem installation directory for your user account. The following commands will add environment variables to your ~/.bashrc file to configure the gem installation path:\n\necho '# Install Ruby Gems to ~/gems' >> ~/.bashrc\necho 'export GEM_HOME=\"$HOME/gems\"' >> ~/.bashrc\necho 'export PATH=\"$HOME/gems/bin:$PATH\"' >> ~/.bashrc\nsource ~/.bashrc\n\ngem install jekyll bundler\n```\n\n**Neues Projekt**\n\n```bash\n#1 Möglichkeit\njekyll new myblog\ncd myblog\nbundle install\nbundle exec jekyll serve\n\n#2. Möglichkeit\nvi Gemfile #gem \"jekyll\"\nbundle init\n```\n\n\n**Upgrade**\n\n```bash\njekyll -v\ngem update jekyll\n```\n\n\n# Publish in Git\n\nhttps://docs.github.com/de/pages/quickstart\nhttps://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll\n\nBei [github](https://github.com/) ein neues Repository mit dem Repository-Name: papierkorp.github.io hinzufügen.\nAnschließend im Repo in `Settings - Pages - Source - Deploy from a branch` und `Settings - Pages - Source - Branch - main`\n\nSeite ist jetzt erreichbar unter: https://papierkorp.github.io\n\nCustom Domain auch in github im Repo unter `Settings - Pages - Custom Domain` eintragen und im DSN den CNAME auf `papierkorp.github.io` verlinken.\n\n# Eigenes Theme erstellen\n\n- https://medium.com/@jameshamann/creating-your-own-jekyll-theme-gem-1f8180a0e4b8\n- https://jekyllrb.com/docs/themes/\n- https://www.siteleaf.com/blog/making-your-first-jekyll-theme-part-1/\n- https://dev.to/supunkavinda/i-created-a-jekyll-theme-in-375-minutes-eoj\n- https://idratherbewriting.com/documentation-theme-jekyll/\n\nAlle templates und Layouts werden in einem Ruby gem gespeichert.\n\n```bash\n\n```\n\n**Publish + Testing**\n\nBei [Ruby Gems](https://rubygems.org/) regsitrieren um das Theme später hochzuladen.\n\n```bash\njekyll new-theme papierkorp-theme\ntree papierkorp-theme\n\t├── Gemfile \t\t\t\t\t#verweist auf .gemspec\n\t├── LICENSE.txt\t\t\t\t\t\n\t├── README.mkdir\t\t\t\t\n\t├── _data\t\t\t\t\t\t\n\t├── _includes\t\t\t\t\t#templates\n\t├── _layouts\t\t\t\t\t\n\t│   ├── default.html \t\t\t\n\t│   ├── page.html \t\t\t\t\n\t│   └── post.html \t\t\t\t\n\t├── _sass\t\t\t\t\t\t#css\n\t├── assets\t\t\t\t\t\t#static files (main styles.scss)\n\t└── papierkorp-theme.gemspec\t#all ruby gem Daten (Version, Name, Beschreibung...)\n\njekyll serve  #wird wie eine jekyll site behandelt und kann deshalb gestartet werden\ngem build YOURTHEME.gemspec #erstellt eine gem file im Ordner, dieses gem File (Pfad) bei meiner Jekyll Seite hinzufügen\n\n#Zum Finish die gemspec Datei mit Version und so füllen:\nvi papierkorp-theme.gemspec\n\ngem push YOURTHEME.gem\ngem yank YOURTHEME #theme wieder löschen fals Fehler passiert sind\n```",
 			"file": "notes.md",
-			"file_size": 4720,
-			"file_write_time": 133306302236629641,
+			"redo_stack":
+			[
+				[
+					15,
+					1,
+					"paste",
+					null,
+					"AgAAAAUKAAAAAAAArAoAAAAAAAAAAAAAZgkAAAAAAABmCQAAAAAAAKEAAAAqKk5ldWVzIFByb2pla3QqKgoKYGBgYmFzaAojMSBNw7ZnbGljaGtlaXQKamVreWxsIG5ldyBteWJsb2cKY2QgbXlibG9nCmJ1bmRsZQpidW5kbGUgZXhlYyBqZWt5bGwgc2VydmUKCiMyLiBNw7ZnbGljaGtlaXQKdmkgR2VtZmlsZSAjZ2VtICJqZWt5bGwiCmJ1bmRsZSBpbml0CmBgYA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAFCgAAAAAAAAUKAAAAAAAAAAAAAAAA8L8"
+				]
+			],
 			"settings":
 			{
-				"buffer_size": 4680,
+				"buffer_size": 4961,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			},
 			"undo_stack":
 			[
 				[
-					51,
+					10,
 					1,
-					"insert",
-					{
-						"characters": "\nbundle"
-					},
-					"BwAAAKsJAAAAAAAArAkAAAAAAAAAAAAArAkAAAAAAACtCQAAAAAAAAAAAACtCQAAAAAAAK4JAAAAAAAAAAAAAK4JAAAAAAAArwkAAAAAAAAAAAAArwkAAAAAAACwCQAAAAAAAAAAAACwCQAAAAAAALEJAAAAAAAAAAAAALEJAAAAAAAAsgkAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACrCQAAAAAAAKsJAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					52,
-					1,
-					"insert",
-					{
-						"characters": " install"
-					},
-					"CAAAALIJAAAAAAAAswkAAAAAAAAAAAAAswkAAAAAAAC0CQAAAAAAAAAAAAC0CQAAAAAAALUJAAAAAAAAAAAAALUJAAAAAAAAtgkAAAAAAAAAAAAAtgkAAAAAAAC3CQAAAAAAAAAAAAC3CQAAAAAAALgJAAAAAAAAAAAAALgJAAAAAAAAuQkAAAAAAAAAAAAAuQkAAAAAAAC6CQAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACyCQAAAAAAALIJAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					13,
-					1,
-					"insert",
-					{
-						"characters": "\n\n"
-					},
-					"AgAAAO8FAAAAAAAA8AUAAAAAAAAAAAAA8AUAAAAAAADxBQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA7wUAAAAAAADvBQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					16,
-					1,
-					"insert",
-					{
-						"characters": "\n\n"
-					},
-					"AgAAAKgGAAAAAAAAqQYAAAAAAAAAAAAAqQYAAAAAAACqBgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAqAYAAAAAAACoBgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					17,
-					1,
-					"paste",
+					"revert",
 					null,
-					"AQAAAKoGAAAAAAAA2AYAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAqgYAAAAAAACqBgAAAAAAAAAAAAAAAPC/"
+					"AwAAAAAAAAAAAAAAAAAAAAAAAABhEgAAIyBFcnN0ZSBTY2hyaXR0ZQoKYGBgYmFzaApqZWt5bGwgc2VydiAjc3RhcnRldCBkZW4gZWluZ2ViYXV0ZW4gU2VydmVyCmBgYAoKIyMgS29uZmlndXJhdGlvbgoKZmluZGV0IMO8YmVyIGBfY29uZmlnLnltbGAgc3RhdHQKCkRlZmF1bHQgS29uZmlndXJhdGlvbmVuOiBodHRwczovL2pla3lsbHJiLmNvbS9kb2NzL2NvbmZpZ3VyYXRpb24vZGVmYXVsdC8KCiMjIFBvc3QgRGVmYXVsdCBMYXlvdXQKCmh0dHA6Ly9qZWt5bGxyYi5jb20vZG9jcy9jb25maWd1cmF0aW9uL2Zyb250LW1hdHRlci1kZWZhdWx0cy8KCmBgYGJhc2gKdmkgX2NvbmZpZy55bWwKCWRlZmF1bHRzOgoJICAtCgkgICAgc2NvcGU6CgkgICAgICBwYXRoOiAiIiAjIGVpbiBsZWVyZXIgc3RyaW5nIGFuIGRpZXNlciBTdGVsbGUgYmV6aWVodCBhbGxlIFByb2pla3RhdGVpZW4gZWluCgkgICAgICB0eXBlOiAicG9zdHMiCgkgICAgdmFsdWVzOgoJICAgICAgbGF5b3V0OiAiZGVmYXVsdCIKYGBgCgojIyBGcm9udCBNYXR0ZXIgKE1ldGFkYXRlbikKCldpcmQgaW0gUG9zdCBlcnN0ZWxsdCwgdW5kIGdhbnogb2JlbiBtaXQgM3ggYC1gIGVpbmdlbGVpdGV0IHVuZCBiZWVuZGV0LgpXaXJkIHZvbiBKZWt5bGwgZ2VsZXNlbiB1bmQgdmVyd2VuZGV0LgoKSGllciBrw7ZubmVuIGF1Y2ggZWlnZW5lIFZhcmlhYmxlbiBmZXN0Z2VsZWd0IHVuZCBiZW5hbm50IHdlcmRlbi4KCkRpZXNlIFZhcmlhYmxlbiBrw7ZubmVuIGRhbm4gaW4gVGVtcGxhdGVzLCBTY2hsZWlmZW4gdW5kIElGLUFiZnJhZ2VuIHZlcndlbmRldCB3ZXJkZW4uCgpJbiBgX2NvbmZpZ2Aga8O2bm5lbiB1bnRlciBgZGVmYXVsdDogdmFsdWVzOmAgZGVmYXVsdCBXZXJ0ZSBmZXN0Z2VsZWd0IHdlcmRlbi4KCkJlaXNwaWVsOgoKYGBgeWFtbAotLS0KbGF5b3V0OiBwb3N0CnRpdGxlOiAgIldlbGNvbWUgdG8gSmVreWxsISIKZGF0ZTogICAyMDIzLTA2LTA2IDEzOjEzOjIwICswMjAwCmNhdGVnb3JpZXM6IGpla3lsbCB1cGRhdGUKLS0tCmBgYAoKIyMgRWlnZW5lcyBMYXlvdXQgZXJzdGVsbGVuCgpgYGBiYXNoCm1rZGlyIG15YmxvZy9fbGF5b3V0CmNkIF9sYXlvdXQKdmkgZGVmYXVsdC5odG1sIHBhZ2UuaHRtbCBwb3N0Lmh0bWwKCm1rZGlyIG15YmxvZy9faW5jbHVkZXMKY2QgX2luY2x1ZGVzCnZpIGhlYWRlci5odG1sIGZvb3Rlci5odG1sIHNpZGViYXIuaHRtbApgYGAKCioqZGVmYXVsdC5odG1sKioKYGBgaHRtbAp7JSBpbmNsdWRlIGhlYWRlci5odG1sICV9CiAgICB7eyBjb250ZW50IH19CnslIGluY2x1ZGUgZm9vdGVyLmh0bWwgJX0KYGBgCgojIyMgTGlxdWlkIFRlbXBsYXRlcwoKaHR0cHM6Ly9zaG9waWZ5LmdpdGh1Yi5pby9saXF1aWQvYmFzaWNzL2ludHJvZHVjdGlvbi8KCioqQmF1dGVpbGUgYXVmcnVmZW4qKgoKYGBgaHRtbAp7JSBpbmNsdWRlIGZvb3Rlci5odG1sICV9CmBgYAoKCiMjIEFuZGVyZXMgVGhlbWUgaW5zdGFsbGllcmVuCgpodHRwczovL2dpdGh1Yi5jb20vU3RhcnRCb290c3RyYXAvc3RhcnRib290c3RyYXAtY2xlYW4tYmxvZy1qZWt5bGwKCgpgYGBiYXNoCnZpIEdlbWZpbGUgI2dlbSAiamVreWxsLXRoZW1lLWNsZWFuLWJsb2ciLgpidW5kbGUgaW5zdGFsbAp2aSBfY29uZmlnLnltbCAjdGhlbWU6IGpla3lsbC10aGVtZS1jbGVhbi1ibG9nCmJ1bmRsZSBleGVjIGpla3lsbCBzZXJ2ZQpgYGAKCmh0dHBzOi8vamVreWxsdGhlbWVzLmlvL3RoZW1lL2FsZW1iaWMKCiMjIG1hcmtkb3duCgphbHMgZGVmYXVsdCBtYXJrZG93biB3aXJkIGh0dHBzOi8va3JhbWRvd24uZ2V0dGFsb25nLm9yZy9xdWlja3JlZi5odG1sIHZlcndlbmRldC4KCiMgSW5zdGFsbGF0aW9uCgpMYXV0IFR1dG9yaWFsOiBodHRwczovL2pla3lsbHJiLmNvbS9kb2NzL3N0ZXAtYnktc3RlcC8wMS1zZXR1cC8KCmBgYGJhc2gKc3VkbyBhcHQtZ2V0IGluc3RhbGwgcnVieS1mdWxsIGJ1aWxkLWVzc2VudGlhbCB6bGliMWctZGV2CgojQXZvaWQgaW5zdGFsbGluZyBSdWJ5R2VtcyBwYWNrYWdlcyAoY2FsbGVkIGdlbXMpIGFzIHRoZSByb290IHVzZXIuIEluc3RlYWQsIHNldCB1cCBhIGdlbSBpbnN0YWxsYXRpb24gZGlyZWN0b3J5IGZvciB5b3VyIHVzZXIgYWNjb3VudC4gVGhlIGZvbGxvd2luZyBjb21tYW5kcyB3aWxsIGFkZCBlbnZpcm9ubWVudCB2YXJpYWJsZXMgdG8geW91ciB+Ly5iYXNocmMgZmlsZSB0byBjb25maWd1cmUgdGhlIGdlbSBpbnN0YWxsYXRpb24gcGF0aDoKCmVjaG8gJyMgSW5zdGFsbCBSdWJ5IEdlbXMgdG8gfi9nZW1zJyA+PiB+Ly5iYXNocmMKZWNobyAnZXhwb3J0IEdFTV9IT01FPSIkSE9NRS9nZW1zIicgPj4gfi8uYmFzaHJjCmVjaG8gJ2V4cG9ydCBQQVRIPSIkSE9NRS9nZW1zL2JpbjokUEFUSCInID4+IH4vLmJhc2hyYwpzb3VyY2Ugfi8uYmFzaHJjCgpnZW0gaW5zdGFsbCBqZWt5bGwgYnVuZGxlcgpgYGAKCioqTmV1ZXMgUHJvamVrdCoqCgpgYGBiYXNoCiMxIE3DtmdsaWNoa2VpdApqZWt5bGwgbmV3IG15YmxvZwpjZCBteWJsb2cKYnVuZGxlIGV4ZWMgamVreWxsIHNlcnZlCgojMi4gTcO2Z2xpY2hrZWl0CnZpIEdlbWZpbGUgI2dlbSAiamVreWxsIgpidW5kbGUgaW5pdApgYGAKCgoqKlVwZ3JhZGUqKgoKYGBgYmFzaApqZWt5bGwgLXYKZ2VtIHVwZGF0ZSBqZWt5bGwKYGBgCgoKIyBQdWJsaXNoIGluIEdpdAoKaHR0cHM6Ly9kb2NzLmdpdGh1Yi5jb20vZGUvcGFnZXMvcXVpY2tzdGFydApodHRwczovL2RvY3MuZ2l0aHViLmNvbS9lbi9wYWdlcy9zZXR0aW5nLXVwLWEtZ2l0aHViLXBhZ2VzLXNpdGUtd2l0aC1qZWt5bGwvY3JlYXRpbmctYS1naXRodWItcGFnZXMtc2l0ZS13aXRoLWpla3lsbAoKQmVpIFtnaXRodWJdKGh0dHBzOi8vZ2l0aHViLmNvbS8pIGVpbiBuZXVlcyBSZXBvc2l0b3J5IG1pdCBkZW0gUmVwb3NpdG9yeS1OYW1lOiBwYXBpZXJrb3JwLmdpdGh1Yi5pbyBoaW56dWbDvGdlbi4KQW5zY2hsaWXDn2VuZCBpbSBSZXBvIGluIGBTZXR0aW5ncyAtIFBhZ2VzIC0gU291cmNlIC0gRGVwbG95IGZyb20gYSBicmFuY2hgIHVuZCBgU2V0dGluZ3MgLSBQYWdlcyAtIFNvdXJjZSAtIEJyYW5jaCAtIG1haW5gCgpTZWl0ZSBpc3QgamV0enQgZXJyZWljaGJhciB1bnRlcjogaHR0cHM6Ly9wYXBpZXJrb3JwLmdpdGh1Yi5pbwoKQ3VzdG9tIERvbWFpbiBhdWNoIGluIGdpdGh1YiBpbSBSZXBvIHVudGVyIGBTZXR0aW5ncyAtIFBhZ2VzIC0gQ3VzdG9tIERvbWFpbmAgZWludHJhZ2VuIHVuZCBpbSBEU04gZGVuIENOQU1FIGF1ZiBgcGFwaWVya29ycC5naXRodWIuaW9gIHZlcmxpbmtlbi4KCiMgRWlnZW5lcyBUaGVtZSBlcnN0ZWxsZW4KCi0gaHR0cHM6Ly9tZWRpdW0uY29tL0BqYW1lc2hhbWFubi9jcmVhdGluZy15b3VyLW93bi1qZWt5bGwtdGhlbWUtZ2VtLTFmODE4MGEwZTRiOAotIGh0dHBzOi8vamVreWxscmIuY29tL2RvY3MvdGhlbWVzLwotIGh0dHBzOi8vd3d3LnNpdGVsZWFmLmNvbS9ibG9nL21ha2luZy15b3VyLWZpcnN0LWpla3lsbC10aGVtZS1wYXJ0LTEvCi0gaHR0cHM6Ly9kZXYudG8vc3VwdW5rYXZpbmRhL2ktY3JlYXRlZC1hLWpla3lsbC10aGVtZS1pbi0zNzUtbWludXRlcy1lb2oKLSBodHRwczovL2lkcmF0aGVyYmV3cml0aW5nLmNvbS9kb2N1bWVudGF0aW9uLXRoZW1lLWpla3lsbC8KCkFsbGUgdGVtcGxhdGVzIHVuZCBMYXlvdXRzIHdlcmRlbiBpbiBlaW5lbSBSdWJ5IGdlbSBnZXNwZWljaGVydC4KCmBgYGJhc2gKCmBgYAoKKipQdWJsaXNoICsgVGVzdGluZyoqCgpCZWkgW1J1YnkgR2Vtc10oaHR0cHM6Ly9ydWJ5Z2Vtcy5vcmcvKSByZWdzaXRyaWVyZW4gdW0gZGFzIFRoZW1lIHNww6R0ZXIgaG9jaHp1bGFkZW4uCgpgYGBiYXNoCmpla3lsbCBuZXctdGhlbWUgcGFwaWVya29ycC10aGVtZQp0cmVlIHBhcGllcmtvcnAtdGhlbWUKCeKUnOKUgOKUgCBHZW1maWxlIAkJCQkJI3ZlcndlaXN0IGF1ZiAuZ2Vtc3BlYwoJ4pSc4pSA4pSAIExJQ0VOU0UudHh0CQkJCQkKCeKUnOKUgOKUgCBSRUFETUUubWtkaXIJCQkJCgnilJzilIDilIAgX2RhdGEJCQkJCQkKCeKUnOKUgOKUgCBfaW5jbHVkZXMJCQkJCSN0ZW1wbGF0ZXMKCeKUnOKUgOKUgCBfbGF5b3V0cwkJCQkJCgnilIIgICDilJzilIDilIAgZGVmYXVsdC5odG1sIAkJCQoJ4pSCICAg4pSc4pSA4pSAIHBhZ2UuaHRtbCAJCQkJCgnilIIgICDilJTilIDilIAgcG9zdC5odG1sIAkJCQkKCeKUnOKUgOKUgCBfc2FzcwkJCQkJCSNjc3MKCeKUnOKUgOKUgCBhc3NldHMJCQkJCQkjc3RhdGljIGZpbGVzIChtYWluIHN0eWxlcy5zY3NzKQoJ4pSU4pSA4pSAIHBhcGllcmtvcnAtdGhlbWUuZ2Vtc3BlYwkjYWxsIHJ1YnkgZ2VtIERhdGVuIChWZXJzaW9uLCBOYW1lLCBCZXNjaHJlaWJ1bmcuLi4pCgpqZWt5bGwgc2VydmUgICN3aXJkIHdpZSBlaW5lIGpla3lsbCBzaXRlIGJlaGFuZGVsdCB1bmQga2FubiBkZXNoYWxiIGdlc3RhcnRldCB3ZXJkZW4KZ2VtIGJ1aWxkIFlPVVJUSEVNRS5nZW1zcGVjICNlcnN0ZWxsdCBlaW5lIGdlbSBmaWxlIGltIE9yZG5lciwgZGllc2VzIGdlbSBGaWxlIChQZmFkKSBiZWkgbWVpbmVyIEpla3lsbCBTZWl0ZSBoaW56dWbDvGdlbgoKI1p1bSBGaW5pc2ggZGllIGdlbXNwZWMgRGF0ZWkgbWl0IFZlcnNpb24gdW5kIHNvIGbDvGxsZW46CnZpIHBhcGllcmtvcnAtdGhlbWUuZ2Vtc3BlYwoKZ2VtIHB1c2ggWU9VUlRIRU1FLmdlbQpnZW0geWFuayBZT1VSVEhFTUUgI3RoZW1lIHdpZWRlciBsw7ZzY2hlbiBmYWxzIEZlaGxlciBwYXNzaWVydCBzaW5kCmBgYAAAAAAAAAAAYRMAAAAAAAAAAAAAAAAAAAAAAABhEwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACrCQAAAAAAAKsJAAAAAAAAAAAAAAAA8L8"
 				]
 			]
 		}
@@ -375,6 +343,13 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Markus/.gitconfig",
+		"/C/Users/Markus/.ssh/config",
+		"/C/Users/Markus/.gitconfig_arbeit",
+		"/C/Users/Markus/.gitconfig_privat",
+		"/C/develop/sirconic/kubeconfig.yml",
+		"/C/Users/Markus/.ssh/id_rsa_privat.pub",
+		"/C/develop/myblog/.git/config",
 		"/C/develop/myblog/myblog.sublime-project",
 		"/C/develop/lan/app/templates/game_all.html",
 		"/C/develop/lan/hilfsdateien/todo.md",
@@ -495,18 +470,11 @@
 		"/C/dev/flasktutorial/microblog/requirements.txt",
 		"/C/dev/flasktutorial/microblog/app/auth/__init__.py",
 		"/C/dev/flasktutorial/microblog/babel.cfg",
-		"/C/dev/flasktutorial/microblog/app/templates/edit_profile.html",
-		"/C/dev/flasktutorial/microblog/app/templates/user.html",
-		"/C/dev/flasktutorial/microblog/app/templates/login.html",
-		"/C/dev/flasktutorial/microblog/tests.py",
-		"/C/dev/flasktutorial/microblog/app/templates/errors/404.html",
-		"/C/dev/flasktutorial/microblog/app/errors.py",
-		"/C/dev/flasktutorial/microblog/app/templates/register.html",
-		"/C/dev/flasktutorial/microblog/app/translations/de/LC_MESSAGES/messages.po"
+		"/C/dev/flasktutorial/microblog/app/templates/edit_profile.html"
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
@@ -719,15 +687,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4680,
+						"buffer_size": 4961,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1752,
-								1752
+								3475,
+								3475
 							]
 						],
 						"settings":
@@ -751,51 +719,41 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
@@ -805,7 +763,17 @@
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
-								"bh_round_content"
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
 							],
 							"mde.match_heading_hashes": false,
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
@@ -813,7 +781,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1330.0,
+						"translation.y": 2926.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
