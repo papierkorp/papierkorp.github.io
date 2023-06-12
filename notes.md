@@ -47,35 +47,6 @@ categories: jekyll update
 ---
 ```
 
-## Eigenes Layout erstellen
-
-```bash
-mkdir myblog/_layout
-cd _layout
-vi default.html page.html post.html
-
-mkdir myblog/_includes
-cd _includes
-vi header.html footer.html sidebar.html
-```
-
-**default.html**
-```html
-{% include header.html %}
-    {{ content }}
-{% include footer.html %}
-```
-
-### Liquid Templates
-
-https://shopify.github.io/liquid/basics/introduction/
-
-**Bauteile aufrufen**
-
-```html
-{% include footer.html %}
-```
-
 
 ## Anderes Theme installieren
 
@@ -89,11 +60,13 @@ vi _config.yml #theme: jekyll-theme-clean-blog
 bundle exec jekyll serve
 ```
 
-https://jekyllthemes.io/theme/alembic
 
 ## markdown
 
 als default markdown wird https://kramdown.gettalong.org/quickref.html verwendet.
+
+
+
 
 # Installation
 
@@ -135,7 +108,8 @@ gem update jekyll
 ```
 
 
-# Publish in Git
+
+# Publish in GitPages
 
 https://docs.github.com/de/pages/quickstart
 https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll
@@ -160,13 +134,13 @@ Custom Domain auch in github im Repo unter `Settings - Pages - Custom Domain` ei
 
 # Eigenes Theme erstellen
 
-- Offizielle Doku: https://jekyllrb.com/docs/themes/
-- Gemfile erstellen: https://medium.com/@jameshamann/creating-your-own-jekyll-theme-gem-1f8180a0e4b8
-- Erste Schritte: https://www.siteleaf.com/blog/making-your-first-jekyll-theme-part-2/
+Offizielle Doku: https://jekyllrb.com/docs/themes/
 
 Alle templates und Layouts werden in einem Ruby gem gespeichert. Das Ruby gem wird später durch den `build` command erstellt und ins Ruby Repo gepusht.
 
-**Vorlage erstellen**
+
+
+**Vorlage.png erstellen**
 
 Hab mir [Lunacy](https://icons8.de/lunacy) installiert und erstmal durch folgende Inspirationen eine Design erstellt:
 
@@ -176,7 +150,21 @@ Hab mir [Lunacy](https://icons8.de/lunacy) installiert und erstmal durch folgend
 - Categories/TOC: https://jeffreytse.github.io/jekyll-theme-yat/categories.html
 - Home/Cards/TOC/Category: https://unifreak.github.io/
 
-**Layout erstellen**
+![image](./_includes/blog_light.png)
+
+
+
+**Theme erstellen**
+
+- Beachten
+	+ [Jekyll Remote Theme](https://github.com/benbalter/jekyll-remote-theme) beachten: => Plugins müssen [Github Approved sein](https://learn.siteleaf.com/themes/jekyll-plugins/#github-pages-approved-plugins&gsc.tab=0)
+	+ Jekyll inkludiert einen SASS/SCSS Compiler => SASS statt CSS verwenden
+		* [SASS/SCSS](#sass) erweitert CSS und macht CSS deutlich flexibler wie bessere Syntax, Nesting, Variablen, Mixins... 
+- Links
+	+ Gemfile erstellen: https://medium.com/@jameshamann/creating-your-own-jekyll-theme-gem-1f8180a0e4b8
+	+ Erste Schritte: https://www.siteleaf.com/blog/making-your-first-jekyll-theme-part-2/
+	+ Liquid (Bibliothek um Layouts zu erstellen): https://shopify.github.io/liquid/basics/introduction/
+
 
 ```bash
 jekyll new-theme papierkorp-theme
@@ -195,17 +183,27 @@ tree papierkorp-theme
 	└── papierkorp-theme.gemspec	#alle ruby gem Daten (Version, Name, Beschreibung...)
 
 cd papierkorp-theme
-vi index.html
-bundle exec jekyll serve --watch #lokalen Server für das Theme starten
 ```
 
+Als erstes index.html und Beispielposts erstellen:
+
 ```bash
+vi index.html #{{ content }} ist Liquid Syntax (siehe Link oben)
+
+	---
+	title: Home
+	layout: post
+	---
+	{{ content }}
+
 mkdir _posts #Beispielposts erstellen
 vi ./_posts/2023-06-01-example-post.md
 vi vi ./_config.yml #Default config.yml mitgeben
+
+bundle exec jekyll serve --watch #lokalen Server für das Theme starten
 ```
 
-[Jekyll Remote Theme](https://github.com/benbalter/jekyll-remote-theme) beachten: => Plugins müssen [Github Approved sein](https://learn.siteleaf.com/themes/jekyll-plugins/#github-pages-approved-plugins&gsc.tab=0)
+
 
 **Mit neuen Projekt testen**
 
@@ -219,6 +217,8 @@ vi _config.yml
 	theme: papierkorp-theme
 bundle exec jekyll serve --watch
 ```
+
+
 
 **Live gehen**
 
@@ -236,10 +236,9 @@ gem yank papierkorp-theme #theme wieder löschen fals Fehler passiert sind
 
 
 
-
 # SASS
 
-```
+```sass
 #Syntax .sass
 nav
 	ul
@@ -252,7 +251,9 @@ nav
 		display: block
 		padding: 6px 12px
 		text-decoration: none
+```
 
+```scss
 #syntax .scss
 nav {
 	ul {
@@ -272,6 +273,9 @@ nav {
 	}
 }
 
+
+
+
 #variables
 $red: hsl(0, 100%, 50%);
 
@@ -280,6 +284,9 @@ $red: hsl(0, 100%, 50%);
 	border: 1px solid $red;
 }
 
+
+
+
 #Nesting
 #&=refer to parent selector
 .btn {
@@ -287,6 +294,9 @@ $red: hsl(0, 100%, 50%);
 	&:hover {}
 	&:active {}
 }
+
+
+
 
 #Funktionalität
 @mixin flex-column($color) {
@@ -321,4 +331,17 @@ $sizes: 40px, 50px, 80px;
 }
 
 .card {background: lighten(green, 25%)}
+
+
+
+#Inheritance
+.base-style {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.heading {
+  @extend .base-style;
+  font-weight: bold;
+}
 ```
