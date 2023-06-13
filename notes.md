@@ -149,6 +149,8 @@ Hab mir [Lunacy](https://icons8.de/lunacy) installiert und erstmal durch folgend
 - Categories/Navi: https://mmistakes.github.io/so-simple-theme/categories/
 - Categories/TOC: https://jeffreytse.github.io/jekyll-theme-yat/categories.html
 - Home/Cards/TOC/Category: https://unifreak.github.io/
+- Cards: https://mmistakes.github.io/jekyll-theme-hpstr/
+- TOC: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
 
 ![image](./_includes/blog_light.png)
 
@@ -164,6 +166,9 @@ Hab mir [Lunacy](https://icons8.de/lunacy) installiert und erstmal durch folgend
 	+ Gemfile erstellen: https://medium.com/@jameshamann/creating-your-own-jekyll-theme-gem-1f8180a0e4b8
 	+ Erste Schritte: https://www.siteleaf.com/blog/making-your-first-jekyll-theme-part-2/
 	+ Liquid (Bibliothek um Layouts zu erstellen): https://shopify.github.io/liquid/basics/introduction/
+	+ Jekyll Hilfe: https://mademistakes.com/articles/going-static/
+		* https://html5boilerplate.com/
+		* https://html5doctor.com/
 
 
 ```bash
@@ -202,6 +207,31 @@ vi vi ./_config.yml #Default config.yml mitgeben
 
 bundle exec jekyll serve --watch #lokalen Server für das Theme starten
 ```
+
+Style implementieren:
+
+```bash
+vi Gemfile
+	gem 'jekyll-sass-converter'
+mkdir _sass
+mkdir /_sass/header
+mkdir assets
+vi /_sass/papierkorp-theme.scss
+	//@import "header"
+	//@import "header/xxx"
+	.test {
+		background-color: yellow;
+	}
+vi /assets/styles.scss
+	---
+
+	---
+	@charset "utf-8";
+	@import "papierkorp-theme";
+vi /_includes
+	<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+```
+
 
 
 
