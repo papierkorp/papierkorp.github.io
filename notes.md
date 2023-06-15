@@ -217,20 +217,22 @@ mkdir _sass
 mkdir /_sass/header
 mkdir assets
 vi /_sass/papierkorp-theme.scss
-	//@import "header"
-	//@import "header/xxx"
-	.test {
-		background-color: yellow;
-	}
+	@import "_header.scss";
+	@import "_base.scss";
+	@import "_variables.scss";
 vi /assets/styles.scss
 	---
 
 	---
 	@charset "utf-8";
 	@import "papierkorp-theme";
-vi /_includes
+vi /_includes/header.html
 	<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 ```
+
+
+
+
 
 
 
@@ -262,6 +264,9 @@ gem build papierkorp-theme.gemspec
 gem push papierkorp-theme.gem
 gem yank papierkorp-theme #theme wieder löschen fals Fehler passiert sind
 ```
+
+
+
 
 
 
