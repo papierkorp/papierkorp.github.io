@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: sirconic Test-Blog
+title: Schiller Test-Blog
 email: ms@sirconic-group.de
 description: >- # this means to ignore newlines until "baseurl:"
   Nur als Test gedacht.
@@ -27,12 +27,13 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  ms@sirconic-group.de
 timezone: Europe/Berlin
-
+locale: de-de
 
 # Build settings
-theme: minima
+theme: jekyll-theme-so-simple
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 port: 4000
 encoding: UTF-8
 
@@ -63,3 +64,14 @@ defaults:
       type: "posts"
     values:
       layout: "default"
+
+
+#so-simple-theme
+paginate: 10  # amount of posts to show per page
+paginate_path: /page:num/
+search_full_content: true
+google_fonts:
+  - name: "Source Sans Pro"
+    weights: "400,400i,700,700i"
+  - name: "Lora"
+    weights: "400,400i,700,700i"
