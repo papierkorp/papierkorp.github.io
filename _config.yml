@@ -75,3 +75,17 @@ google_fonts:
     weights: "400,400i,700,700i"
   - name: "Lora"
     weights: "400,400i,700,700i"
+footer_links: true
+footer_links:
+  - title: Feed
+    url: atom.xml
+    icon: fas fa-rss-square
+  #- title: Twitter
+  #  url: https://twitter.com/mmistakes
+  #  icon: fab fa-twitter-square
+  #- title: Instagram
+  #  url: https://instagram.com/mmistakes
+  #  icon: fab fa-instagram
+  #- title: GitHub
+  #  url: https://github.com/mmistakes
+  #  icon: fab fa-github-square
