@@ -32,6 +32,7 @@ locale: de-de
 # Build settings
 theme: jekyll-theme-so-simple
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-paginate
 port: 4000
