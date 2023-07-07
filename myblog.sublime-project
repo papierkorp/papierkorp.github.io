@@ -5,7 +5,7 @@
 			"path": ".",
 		},
 		{
-			"path": "C:\\develop\\papierkorp-theme"
+			"path": "C:\\develop\\privat\\papierkorp-theme",
 		},
 	],
 	"settings":
@@ -14,9 +14,9 @@
             {
                 "syntax": "Liquid/Syntaxes/HTML (Liquid)",
                 "rules": [
-                    {"file_path": ".*\\.html(\\.dist)?$"},
-                ]
+                    {"file_path": ".*\\.html(\\.dist)?$",},
+				],
             }
-        ],
+		],
 	},
 }
